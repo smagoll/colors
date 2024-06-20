@@ -1,10 +1,10 @@
 using System;
-using System.Text;
+using System.Linq;
 using UnityEngine;
 
 public class LevelMaster : MonoBehaviour
 {
-    public static Action Check;
+    public static Action DeckComplete;
     
     private Level currentLevel;
     [SerializeField]
@@ -14,7 +14,7 @@ public class LevelMaster : MonoBehaviour
     
     private void Start()
     {
-        currentLevel = new Level("солома");
+        currentLevel = new Level("соломинка", Mode.Duo);
         
         Launch();
     }
@@ -22,38 +22,24 @@ public class LevelMaster : MonoBehaviour
     private void Launch()
     {
         letterSpawner.Spawn(currentLevel);
-        cellSpawner.Spawn(currentLevel);
+        cellSpawner.Launch(currentLevel);
     }
 
-    private void CheckWord()
+    private void CheckEndGame()
     {
-        StringBuilder sb = new StringBuilder();
-        foreach (var cell in cellSpawner.Cells)
+        if (cellSpawner.Decks.Count(x => x.IsCompleted) == cellSpawner.Decks.Length)
         {
-            if (cell.InstalledLetter == null)
-            {
-                return;
-            }
-        }
-        
-        foreach (var cell in cellSpawner.Cells)
-        {
-            sb.AppendFormat(cell.InstalledLetter.Symbol.ToString());
-        }
-
-        if (currentLevel.Word == sb.ToString())
-        {
-            Debug.Log("end game///");
+            Debug.Log("Level completed!!!");
         }
     }
 
     private void OnEnable()
     {
-        Check += CheckWord;
+        DeckComplete += CheckEndGame;
     }
 
     private void OnDisable()
     {
-        Check -= CheckWord;
+        DeckComplete -= CheckEndGame;
     }
 }

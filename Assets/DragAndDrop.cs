@@ -15,6 +15,8 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IDrop
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (letter.Cell != null) letter.Cell.Clear();
+        letter.Cell = null;
         prevParent = transform.parent;
         transform.SetParent(GameManager.instance.dragTransform);
     }
@@ -35,13 +37,12 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IDrop
             
             if (raycastResult.gameObject.CompareTag("ListLetter"))
             {
-                letter.Cell.Clear();
                 transform.SetParent(raycastResult.gameObject.transform);
                 return;
             }
         }
         
         //reset position
-        transform.SetParent(prevParent);
+        transform.SetParent(GameManager.instance.listLetters);
     }
 }

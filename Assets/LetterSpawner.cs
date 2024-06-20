@@ -14,8 +14,22 @@ public class LetterSpawner : MonoBehaviour
     public void Spawn(Level level)
     {
         Clear();
-        
-        var shuffleWord = Shuffle(level.Word);
+
+        switch (level.Mode)
+        {
+            case Mode.Single:
+                Spawn(level.Words[0]);
+                break;
+            case Mode.Duo:
+                Spawn(level.Words[0]);
+                Spawn(level.Words[1]);
+                break;
+        }
+    }
+
+    private void Spawn(string word)
+    {
+        var shuffleWord = Shuffle(word);
         foreach (var symbol in shuffleWord)
         {
             var letter = Instantiate(prefabLetter, listLetters);
@@ -26,10 +40,7 @@ public class LetterSpawner : MonoBehaviour
 
     private void Clear()
     {
-        foreach (var letter in Letters)
-        {
-            Destroy(letter.gameObject);
-        }
+        foreach (var letter in Letters) Destroy(letter.gameObject);
     }
     
     private string Shuffle(string str)
