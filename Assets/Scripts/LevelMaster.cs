@@ -22,11 +22,11 @@ public class LevelMaster : MonoBehaviour
     {
         if (isTest)
         {
-            currentLevel = new Level(testString, Mode.Duo);
+            currentLevel = new Level(testString, Mode.Duo, Difficult.Easy);
         }
         else
         {
-            currentLevel = new Level(Mode.Duo);
+            currentLevel = new Level(Mode.Duo, Difficult.Hard);
         }
         
         Launch();
