@@ -207,6 +207,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   letterSpawner: {fileID: 50387528}
   cellSpawner: {fileID: 50387529}
+  isTest: 1
+  testString: "\u043F\u0430\u043D\u0430\u043C\u0430"
 --- !u!114 &50387528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,6 +248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 64142163}
   - component: {fileID: 64142162}
+  - component: {fileID: 64142164}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -282,6 +285,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &64142164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64142161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 059964b5ff54c6b42b1caf7683932d67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &446881311
 GameObject:
   m_ObjectHideFlags: 0

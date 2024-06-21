@@ -11,10 +11,23 @@ public class LevelMaster : MonoBehaviour
     private LetterSpawner letterSpawner;
     [SerializeField]
     private CellSpawner cellSpawner;
+
+    [Header("Test")]
+    [SerializeField]
+    private bool isTest;
+    [SerializeField]
+    private string testString;
     
     private void Start()
     {
-        currentLevel = new Level("соломинка", Mode.Duo);
+        if (isTest)
+        {
+            currentLevel = new Level(testString, Mode.Duo);
+        }
+        else
+        {
+            currentLevel = new Level(Mode.Duo);
+        }
         
         Launch();
     }
