@@ -15,10 +15,7 @@ public class DataManager : MonoBehaviour
     private void Awake()
     {
         if (instance == null) instance = this;
-    }
-
-    private void Start()
-    {
+        
         Load();
     }
 
@@ -30,7 +27,7 @@ public class DataManager : MonoBehaviour
 
     public string RandomWord(Difficult difficult)
     {
-        string[] sortedWords = new string[] { };
+        string[] sortedWords = { };
         
         switch (difficult)
         {
@@ -44,8 +41,8 @@ public class DataManager : MonoBehaviour
                 sortedWords = Data.words.Where(x => x.Length > 7).ToArray();
                 break;
         }
+        
         var rnd = Random.Range(0, sortedWords.Length);
-        Debug.Log(sortedWords.Length);
         return sortedWords[rnd];
     }
 }

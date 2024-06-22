@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u0421"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 5d744f942e9c41a4b9c637e1a0cb12b9, type: 2}
-  m_sharedMaterial: {fileID: 137543219220438455, guid: 5d744f942e9c41a4b9c637e1a0cb12b9, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 3d156b7a437807b41ab9b988682bbd5e, type: 2}
+  m_sharedMaterial: {fileID: 5423504536310271834, guid: 3d156b7a437807b41ab9b988682bbd5e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
