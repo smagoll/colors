@@ -18,18 +18,25 @@ public class LetterSpawner : MonoBehaviour
         switch (level.Mode)
         {
             case Mode.Single:
-                Spawn(level.Words[0]);
+                Spawn(level.Words);
                 break;
             case Mode.Duo:
-                Spawn(level.Words[0]);
-                Spawn(level.Words[1]);
+                Spawn(level.Words);
                 break;
         }
     }
 
-    private void Spawn(string word)
+    private void Spawn(string[] words)
     {
-        var shuffleWord = Shuffle(word);
+        StringBuilder sb = new StringBuilder();
+
+        foreach (var word in words)
+        {
+            sb.AppendFormat(word);
+        }
+        
+        var shuffleWord = Shuffle(sb.ToString());
+        
         foreach (var symbol in shuffleWord)
         {
             var letter = Instantiate(prefabLetter, listLetters);

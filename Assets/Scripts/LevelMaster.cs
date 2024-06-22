@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LevelMaster : MonoBehaviour
 {
+    public static LevelMaster instance;
+    
     public static Action DeckComplete;
     public static Action<Level> StartLevel;
     public static Action CompleteLevel;
@@ -20,16 +22,23 @@ public class LevelMaster : MonoBehaviour
     private bool isTest;
     [SerializeField]
     private string testString;
+
+    public Level Level => currentLevel;
     
+    private void Awake()
+    {
+        if (instance == null) instance = this;
+    }
+
     private void Start()
     {
         if (isTest)
         {
-            currentLevel = new Level(testString, Mode.Single, Difficult.Easy);
+            currentLevel = new Level(testString, Mode.Single, Difficult.Easy, GameType.Rating);
         }
         else
         {
-            currentLevel = new Level(Mode.Duo, Difficult.Easy);
+            currentLevel = new Level(Mode.Duo, Difficult.Easy, GameType.Rating);
         }
         
         StartLevel?.Invoke(currentLevel);

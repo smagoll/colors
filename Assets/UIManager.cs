@@ -6,6 +6,9 @@ public class UIManager : MonoBehaviour
     [SerializeField]
     private TimerUI timer;
 
+    public WindowComplete windowComplete;
+    public WindowLose windowLose;
+
     private void LaunchTimer(Level level)
     {
         var time = level.Difficult switch
@@ -20,9 +23,20 @@ public class UIManager : MonoBehaviour
         
         timer.Launch(time, () => LevelMaster.LoseLevel?.Invoke());
     }
-
+    
     private void OnEnable()
     {
         LevelMaster.StartLevel += LaunchTimer;
+        LevelMaster.LoseLevel += windowLose.Show;
+        LevelMaster.CompleteLevel += windowComplete.Show;
+        LevelMaster.CompleteLevel += timer.Stop;
+    }
+    
+    private void OnDisable()
+    {
+        LevelMaster.StartLevel += LaunchTimer;
+        LevelMaster.LoseLevel -= windowLose.Show;
+        LevelMaster.CompleteLevel -= windowComplete.Show;
+        LevelMaster.CompleteLevel -= timer.Stop;
     }
 }
