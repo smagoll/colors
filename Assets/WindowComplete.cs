@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class WindowComplete : MonoBehaviour, IWindow
 {
@@ -9,7 +10,7 @@ public class WindowComplete : MonoBehaviour, IWindow
     [SerializeField]
     private GameObject windowInfo;
     [SerializeField]
-    private TextMeshProUGUI rating;
+    private TextMeshProUGUI textRating;
     
     public void Show()
     {
@@ -18,11 +19,12 @@ public class WindowComplete : MonoBehaviour, IWindow
 
         if (LevelMaster.instance.Level.GameType == GameType.Rating)
         {
-            rating.gameObject.SetActive(true);
+            textRating.text = "+ " + LevelMaster.instance.Rating;
+            textRating.gameObject.SetActive(true);
         }
         else
         {
-            rating.gameObject.SetActive(false);
+            textRating.gameObject.SetActive(false);
         }
     }
 
@@ -31,4 +33,6 @@ public class WindowComplete : MonoBehaviour, IWindow
         background.SetActive(false);
         windowInfo.SetActive(false);
     }
+
+
 }

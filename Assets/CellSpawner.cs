@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -16,11 +15,11 @@ public class CellSpawner : MonoBehaviour
         switch (level.Mode)
         {
             case Mode.Single:
-                decks.First().Init(level.Words[0]);
+                decks.First().Init(level.Words[0].Length);
                 break;
             case Mode.Duo:
-                decks[0].Init(level.Words[0]);
-                decks[1].Init(level.Words[1]);
+                decks[0].Init(level.Words[0].Length);
+                decks[1].Init(level.Words[1].Length);
                 break;
         }
     }

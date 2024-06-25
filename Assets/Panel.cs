@@ -1,10 +1,23 @@
 using UnityEngine;
 
-public abstract class Panel : MonoBehaviour
+public class Panel : MonoBehaviour
 {
     public Panel nextPanel;
     
-    public abstract void Show();
+    [SerializeField]
+    private GameObject buttons;
+    
+    public void Show()
+    {
+        buttons.SetActive(true);
+    }
 
-    public abstract void Hide();
+    public void Hide()
+    {
+        //анимация исчезновения
+        
+        nextPanel.Show();
+        
+        buttons.SetActive(false);
+    }
 }

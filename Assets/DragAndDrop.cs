@@ -6,10 +6,11 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IDrop
 {
     [SerializeField] 
     private Letter letter;
-    private Transform prevParent;
     
     public void OnDrag(PointerEventData eventData)
     {
+        if (letter.IsDone) return;
+        
         transform.position = Input.mousePosition;
     }
 
@@ -17,7 +18,6 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IDrop
     {
         if (letter.Cell != null) letter.Cell.Clear();
         letter.Cell = null;
-        prevParent = transform.parent;
         transform.SetParent(GameManager.instance.dragTransform);
     }
 

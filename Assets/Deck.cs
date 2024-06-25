@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
@@ -7,19 +8,17 @@ public class Deck : MonoBehaviour
     [SerializeField]
     private Cell prefabCell;
     
-    public List<Cell> Cells { get; set; } = new();
-    private string Word { get; set; }
+    public List<Cell> Cells { get; } = new();
     public bool IsCompleted { get; set; }
     
-    public void Init(string word)
+    public void Init(int count)
     {
-        Word = word;
-        Spawn(word, transform);
+        Spawn(count, transform);
     }
     
-    private void Spawn(string word, Transform listTransform)
+    private void Spawn(int count, Transform listTransform)
     {
-        for (int i = 0; i < word.Length; i++)
+        for (int i = 0; i < count; i++)
         {
             var cell = Instantiate(prefabCell, listTransform);
             cell.deck = this;
@@ -30,6 +29,7 @@ public class Deck : MonoBehaviour
     public void Clear()
     {
         foreach (Transform cell in transform) Destroy(cell.gameObject);
+        Cells.Clear();
     }
 
     public void Check()
@@ -48,11 +48,25 @@ public class Deck : MonoBehaviour
             sb.AppendFormat(cell.InstalledLetter.Symbol.ToString());
         }
 
-        if (Word == sb.ToString())
+        foreach (var word in LevelMaster.instance.Level.Words)
         {
-            Debug.Log($"{Word} is completed!");
-            IsCompleted = true;
-            LevelMaster.DeckComplete?.Invoke();
+            if (word == sb.ToString())
+            {
+                Debug.Log($"{word} is completed!");
+                IsCompleted = true;
+                foreach (var cell in Cells) cell.InstalledLetter.IsDone = true; // deactivate drag
+                LevelMaster.DeckComplete?.Invoke();
+            }
         }
+    }
+
+    private void OnEnable()
+    {
+        GameManager.restartGame += () => IsCompleted = false;
+    }
+    
+    private void OnDisable()
+    {
+        GameManager.restartGame -= () => IsCompleted = false;
     }
 }

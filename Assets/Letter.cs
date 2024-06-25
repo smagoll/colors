@@ -5,6 +5,8 @@ public class Letter : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI textLetter;
+    
+    public bool IsDone { get; set; }
 
     public Cell Cell { get; set; }
     

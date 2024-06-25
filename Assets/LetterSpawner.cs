@@ -9,7 +9,7 @@ public class LetterSpawner : MonoBehaviour
     [SerializeField]
     private Transform listLetters;
 
-    private List<Letter> Letters { get; } = new();
+    public List<Letter> Letters { get; } = new();
     
     public void Spawn(Level level)
     {
@@ -48,6 +48,7 @@ public class LetterSpawner : MonoBehaviour
     private void Clear()
     {
         foreach (var letter in Letters) Destroy(letter.gameObject);
+        Letters.Clear();
     }
     
     private string Shuffle(string str)
