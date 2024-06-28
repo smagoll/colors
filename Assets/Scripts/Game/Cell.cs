@@ -1,9 +1,16 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Cell : MonoBehaviour
 {
+    [SerializeField]
+    private Color colorDone;
+    [SerializeField]
+    private Image image;
+    
     public Deck deck;
     public Letter InstalledLetter { get; set; }
+    public bool IsDone { get; set; }
     
     public void Set(Letter letter)
     {
@@ -26,5 +33,11 @@ public class Cell : MonoBehaviour
     public void Clear()
     {
         InstalledLetter = null;
+    }
+
+    public void Done()
+    {
+        image.color = colorDone;
+        InstalledLetter.IsDone = true;
     }
 }

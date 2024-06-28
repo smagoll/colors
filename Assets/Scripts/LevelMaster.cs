@@ -138,7 +138,7 @@ public class LevelMaster : MonoBehaviour
                         if(deck.Cells[index].InstalledLetter != null)
                             if(deck.Cells[index].InstalledLetter.Symbol == rndLetter.Symbol) continue;
                         deck.Cells[index].Set(rndLetter);
-                        rndLetter.IsDone = true;
+                        rndLetter.Cell.Done();
                         return;
                     }
                 }

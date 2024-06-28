@@ -54,7 +54,10 @@ public class Deck : MonoBehaviour
             {
                 Debug.Log($"{word} is completed!");
                 IsCompleted = true;
-                foreach (var cell in Cells) cell.InstalledLetter.IsDone = true; // deactivate drag
+                foreach (var cell in Cells)
+                {
+                    cell.Done();
+                } // deactivate drag
                 LevelMaster.DeckComplete?.Invoke();
             }
         }

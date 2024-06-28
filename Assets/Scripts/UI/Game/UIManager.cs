@@ -14,10 +14,10 @@ public class UIManager : MonoBehaviour
     {
         var time = level.Difficult switch
         {
-            Difficult.Easy => 30,
-            Difficult.Medium => 60,
-            Difficult.Hard => 90,
-            _ => 30
+            Difficult.Easy => 20,
+            Difficult.Medium => 40,
+            Difficult.Hard => 60,
+            _ => 20
         };
 
         if (level.Mode == Mode.Duo) time *= 2;

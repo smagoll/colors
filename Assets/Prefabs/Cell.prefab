@@ -66,8 +66,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: 52300292367b4c84bafcb76e23eb214d, type: 2}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -88,3 +88,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf5fe50e6f12ba14ca38ca636485287c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorDone: {r: 0.30588236, g: 0.99607843, b: 0.39607844, a: 1}
+  image: {fileID: 4956190710778269276}
+  deck: {fileID: 0}

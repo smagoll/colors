@@ -31,6 +31,7 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IDrop
             if (raycastResult.gameObject.CompareTag("Cell"))
             {
                 var cell = raycastResult.gameObject.GetComponent<Cell>();
+                if (cell.InstalledLetter != null) break;
                 cell.Set(letter);
                 return;
             }
