@@ -8,6 +8,8 @@ public class TimerUI : MonoBehaviour
 {
     [SerializeField] 
     private TextMeshProUGUI textTime;
+    [SerializeField]
+    private CanvasGroup canvasGroup;
 
     private Timer timer;
     private CancellationTokenSource cancellationTokenSource;
@@ -30,6 +32,6 @@ public class TimerUI : MonoBehaviour
         HideTimer();
     }
     
-    private void ShowTimer() => textTime.DOFade(1f, .5f);
-    private void HideTimer() => textTime.DOFade(0f, .5f);
+    private void ShowTimer() => canvasGroup.DOFade(1f, .5f);
+    private void HideTimer() => canvasGroup.DOFade(0f, .5f);
 }
