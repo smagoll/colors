@@ -1,0 +1,974 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8051846541714888237
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13800, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializedDependencies:
+  - key: Required by Scripts
+    value: []
+    icon: class/MonoScript
+    size: 0
+  - key: Animation Module
+    value:
+    - Animator
+    - AnimatorController
+    - AnimatorOverrideController
+    - RuntimeAnimatorController
+    icon: package/com.unity.modules.animation
+    size: 0
+  - key: Animator
+    value: []
+    icon: class/Animator
+    size: 0
+  - key: AnimatorController
+    value: []
+    icon: class/AnimatorController
+    size: 0
+  - key: AnimatorOverrideController
+    value: []
+    icon: class/AnimatorOverrideController
+    size: 0
+  - key: RuntimeAnimatorController
+    value: []
+    icon: class/RuntimeAnimatorController
+    size: 0
+  - key: AssetBundle Module
+    value:
+    - AssetBundle
+    icon: package/com.unity.modules.assetbundle
+    size: 0
+  - key: AssetBundle
+    value: []
+    icon: class/AssetBundle
+    size: 0
+  - key: Audio Module
+    value:
+    - AudioBehaviour
+    - AudioClip
+    - AudioListener
+    - AudioManager
+    - AudioMixer
+    - AudioMixerGroup
+    - AudioMixerSnapshot
+    - AudioSource
+    - SampleClip
+    icon: package/com.unity.modules.audio
+    size: 0
+  - key: AudioBehaviour
+    value:
+    - Assets/Scenes/Game.unity
+    - Assets/Scenes/Menu.unity
+    icon: class/AudioBehaviour
+    size: 0
+  - key: Assets/Scenes/Game.unity
+    value: []
+    icon: class/SceneAsset
+    size: 0
+  - key: Assets/Scenes/Menu.unity
+    value: []
+    icon: class/SceneAsset
+    size: 0
+  - key: AudioClip
+    value:
+    - Assets/Scenes/Menu.unity
+    icon: class/AudioClip
+    size: 0
+  - key: AudioListener
+    value:
+    - Assets/Scenes/Game.unity
+    - Assets/Scenes/Menu.unity
+    icon: class/AudioListener
+    size: 0
+  - key: AudioManager
+    value: []
+    icon: class/AudioManager
+    size: 0
+  - key: AudioMixer
+    value:
+    - Assets/Scenes/Menu.unity
+    icon: class/AudioMixer
+    size: 0
+  - key: AudioMixerGroup
+    value:
+    - Assets/Scenes/Menu.unity
+    icon: class/AudioMixerGroup
+    size: 0
+  - key: AudioMixerSnapshot
+    value:
+    - Assets/Scenes/Menu.unity
+    icon: class/AudioMixerSnapshot
+    size: 0
+  - key: AudioSource
+    value:
+    - Assets/Scenes/Menu.unity
+    icon: class/AudioSource
+    size: 0
+  - key: SampleClip
+    value:
+    - Assets/Scenes/Menu.unity
+    icon: class/SampleClip
+    size: 0
+  - key: Core Module
+    value:
+    - Behaviour
+    - BuildSettings
+    - Camera
+    - Component
+    - ComputeShader
+    - Cubemap
+    - CubemapArray
+    - DelayedCallManager
+    - EditorExtension
+    - GameManager
+    - GameObject
+    - GlobalGameManager
+    - GraphicsSettings
+    - InputManager
+    - LevelGameManager
+    - Light
+    - LightProbes
+    - LightingSettings
+    - LightmapSettings
+    - LineRenderer
+    - LowerResBlitTexture
+    - Material
+    - Mesh
+    - MeshFilter
+    - MeshRenderer
+    - MonoBehaviour
+    - MonoManager
+    - MonoScript
+    - NamedObject
+    - Object
+    - PlayerSettings
+    - PreloadData
+    - QualitySettings
+    - RectTransform
+    - ReflectionProbe
+    - RenderSettings
+    - RenderTexture
+    - Renderer
+    - ResourceManager
+    - RuntimeInitializeOnLoadManager
+    - Shader
+    - ShaderNameRegistry
+    - SortingGroup
+    - Sprite
+    - SpriteAtlas
+    - SpriteRenderer
+    - TagManager
+    - TextAsset
+    - Texture
+    - Texture2D
+    - Texture2DArray
+    - Texture3D
+    - TimeManager
+    - TrailRenderer
+    - Transform
+    - Required by Animation Module
+    - Required by AssetBundle Module
+    - Required by Audio Module
+    - Required by HotReload Module
+    - Required by IMGUI Module
+    - Required by ImageConversion Module
+    - Required by InputLegacy Module
+    - Required by JSONSerialize Module
+    - Required by ParticleSystem Module
+    - Required by Physics Module
+    - Required by Physics2D Module
+    - Required by RuntimeInitializeOnLoadManagerInitializer Module
+    - Required by TLS Module
+    - Required by TextCoreFontEngine Module
+    - Required by TextCoreTextEngine Module
+    - Required by TextRendering Module
+    - Required by UI Module
+    - Required by UIElements Module
+    - Required by UnityWebRequest Module
+    - Required by UnityWebRequestTexture Module
+    - Required by WebGL Module
+    icon: package/com.unity.modules.core
+    size: 0
+  - key: Behaviour
+    value: []
+    icon: class/Behaviour
+    size: 0
+  - key: BuildSettings
+    value: []
+    icon: class/BuildSettings
+    size: 0
+  - key: Camera
+    value:
+    - Assets/Scenes/Game.unity
+    - Assets/Scenes/Menu.unity
+    icon: class/Camera
+    size: 0
+  - key: Component
+    value: []
+    icon: class/Component
+    size: 0
+  - key: ComputeShader
+    value: []
+    icon: class/ComputeShader
+    size: 0
+  - key: Cubemap
+    value: []
+    icon: class/Cubemap
+    size: 0
+  - key: CubemapArray
+    value: []
+    icon: class/CubemapArray
+    size: 0
+  - key: DelayedCallManager
+    value: []
+    icon: class/DelayedCallManager
+    size: 0
+  - key: EditorExtension
+    value:
+    - Assets/Scenes/Game.unity
+    - Assets/Scenes/Menu.unity
+    icon: class/EditorExtension
+    size: 0
+  - key: GameManager
+    value: []
+    icon: class/GameManager
+    size: 0
+  - key: GameObject
+    value:
+    - Assets/Scenes/Game.unity
+    - Assets/Scenes/Menu.unity
+    icon: class/GameObject
+    size: 0
+  - key: GlobalGameManager
+    value: []
+    icon: class/GlobalGameManager
+    size: 0
+  - key: GraphicsSettings
+    value: []
+    icon: class/GraphicsSettings
+    size: 0
+  - key: InputManager
+    value: []
+    icon: class/InputManager
+    size: 0
+  - key: LevelGameManager
+    value:
+    - Assets/Scenes/Game.unity
+    - Assets/Scenes/Menu.unity
+    icon: class/LevelGameManager
+    size: 0
+  - key: Light
+    value:
+    - Assets/Scenes/Game.unity
+    icon: class/Light
+    size: 0
+  - key: LightProbes
+    value: []
+    icon: class/LightProbes
+    size: 0
+  - key: LightingSettings
+    value: []
+    icon: class/LightingSettings
+    size: 0
+  - key: LightmapSettings
+    value:
+    - Assets/Scenes/Game.unity
+    - Assets/Scenes/Menu.unity
+    icon: class/LightmapSettings
+    size: 0
+  - key: LineRenderer
+    value: []
+    icon: class/LineRenderer
+    size: 0
+  - key: LowerResBlitTexture
+    value: []
+    icon: class/LowerResBlitTexture
+    size: 0
+  - key: Material
+    value:
+    - Assets/Scenes/Game.unity
+    - Assets/Scenes/Menu.unity
+    icon: class/Material
+    size: 0
+  - key: Mesh
+    value:
+    - Assets/Scenes/Game.unity
+    icon: class/Mesh
+    size: 0
+  - key: MeshFilter
+    value: []
+    icon: class/MeshFilter
+    size: 0
+  - key: MeshRenderer
+    value: []
+    icon: class/MeshRenderer
+    size: 0
+  - key: MonoBehaviour
+    value:
+    - Assets/Scenes/Game.unity
+    - Assets/Scenes/Menu.unity
+    icon: class/MonoBehaviour
+    size: 0
+  - key: MonoManager
+    value: []
+    icon: class/MonoManager
+    size: 0
+  - key: MonoScript
+    value:
+    - Assets/Scenes/Game.unity
+    - Assets/Scenes/Menu.unity
+    icon: class/MonoScript
+    size: 0
+  - key: NamedObject
+    value:
+    - Assets/Scenes/Game.unity
+    - Assets/Scenes/Menu.unity
+    icon: class/NamedObject
+    size: 0
+  - key: Object
+    value: []
+    icon: class/Object
+    size: 0
+  - key: PlayerSettings
+    value: []
+    icon: class/PlayerSettings
+    size: 0
+  - key: PreloadData
+    value: []
+    icon: class/PreloadData
+    size: 0
+  - key: QualitySettings
+    value: []
+    icon: class/QualitySettings
+    size: 0
+  - key: RectTransform
+    value:
+    - Assets/Scenes/Game.unity
+    - Assets/Scenes/Menu.unity
+    icon: class/RectTransform
+    size: 0
+  - key: ReflectionProbe
+    value: []
+    icon: class/ReflectionProbe
+    size: 0
+  - key: RenderSettings
+    value:
+    - Assets/Scenes/Game.unity
+    - Assets/Scenes/Menu.unity
+    icon: class/RenderSettings
+    size: 0
+  - key: RenderTexture
+    value: []
+    icon: class/RenderTexture
+    size: 0
+  - key: Renderer
+    value: []
+    icon: class/Renderer
+    size: 0
+  - key: ResourceManager
+    value: []
+    icon: class/ResourceManager
+    size: 0
+  - key: RuntimeInitializeOnLoadManager
+    value: []
+    icon: class/RuntimeInitializeOnLoadManager
+    size: 0
+  - key: Shader
+    value:
+    - Assets/Scenes/Game.unity
+    - Assets/Scenes/Menu.unity
+    icon: class/Shader
+    size: 0
+  - key: ShaderNameRegistry
+    value: []
+    icon: class/ShaderNameRegistry
+    size: 0
+  - key: SortingGroup
+    value: []
+    icon: class/SortingGroup
+    size: 0
+  - key: Sprite
+    value:
+    - Assets/Scenes/Game.unity
+    - Assets/Scenes/Menu.unity
+    icon: class/Sprite
+    size: 0
+  - key: SpriteAtlas
+    value: []
+    icon: class/SpriteAtlas
+    size: 0
+  - key: SpriteRenderer
+    value: []
+    icon: class/SpriteRenderer
+    size: 0
+  - key: TagManager
+    value: []
+    icon: class/TagManager
+    size: 0
+  - key: TextAsset
+    value: []
+    icon: class/TextAsset
+    size: 0
+  - key: Texture
+    value:
+    - Assets/Scenes/Game.unity
+    - Assets/Scenes/Menu.unity
+    icon: class/Texture
+    size: 0
+  - key: Texture2D
+    value:
+    - Assets/Scenes/Game.unity
+    - Assets/Scenes/Menu.unity
+    icon: class/Texture2D
+    size: 0
+  - key: Texture2DArray
+    value: []
+    icon: class/Texture2DArray
+    size: 0
+  - key: Texture3D
+    value: []
+    icon: class/Texture3D
+    size: 0
+  - key: TimeManager
+    value: []
+    icon: class/TimeManager
+    size: 0
+  - key: TrailRenderer
+    value: []
+    icon: class/TrailRenderer
+    size: 0
+  - key: Transform
+    value: []
+    icon: class/Transform
+    size: 0
+  - key: Required by Animation Module
+    value: []
+    icon: package/com.unity.modules.animation
+    size: 0
+  - key: Required by AssetBundle Module
+    value: []
+    icon: package/com.unity.modules.assetbundle
+    size: 0
+  - key: Required by Audio Module
+    value: []
+    icon: package/com.unity.modules.audio
+    size: 0
+  - key: Required by HotReload Module
+    value: []
+    icon: package/com.unity.modules.hotreload
+    size: 0
+  - key: Required by IMGUI Module
+    value: []
+    icon: package/com.unity.modules.imgui
+    size: 0
+  - key: Required by ImageConversion Module
+    value: []
+    icon: package/com.unity.modules.imageconversion
+    size: 0
+  - key: Required by InputLegacy Module
+    value: []
+    icon: package/com.unity.modules.inputlegacy
+    size: 0
+  - key: Required by JSONSerialize Module
+    value: []
+    icon: package/com.unity.modules.jsonserialize
+    size: 0
+  - key: Required by ParticleSystem Module
+    value: []
+    icon: package/com.unity.modules.particlesystem
+    size: 0
+  - key: Required by Physics Module
+    value: []
+    icon: package/com.unity.modules.physics
+    size: 0
+  - key: Required by Physics2D Module
+    value: []
+    icon: package/com.unity.modules.physics2d
+    size: 0
+  - key: Required by RuntimeInitializeOnLoadManagerInitializer Module
+    value: []
+    icon: package/com.unity.modules.runtimeinitializeonloadmanagerinitializer
+    size: 0
+  - key: Required by TLS Module
+    value: []
+    icon: package/com.unity.modules.tls
+    size: 0
+  - key: Required by TextCoreFontEngine Module
+    value: []
+    icon: package/com.unity.modules.textcorefontengine
+    size: 0
+  - key: Required by TextCoreTextEngine Module
+    value: []
+    icon: package/com.unity.modules.textcoretextengine
+    size: 0
+  - key: Required by TextRendering Module
+    value: []
+    icon: package/com.unity.modules.textrendering
+    size: 0
+  - key: Required by UI Module
+    value: []
+    icon: package/com.unity.modules.ui
+    size: 0
+  - key: Required by UIElements Module
+    value: []
+    icon: package/com.unity.modules.uielements
+    size: 0
+  - key: Required by UnityWebRequest Module
+    value: []
+    icon: package/com.unity.modules.unitywebrequest
+    size: 0
+  - key: Required by UnityWebRequestTexture Module
+    value: []
+    icon: package/com.unity.modules.unitywebrequesttexture
+    size: 0
+  - key: Required by WebGL Module
+    value: []
+    icon: package/com.unity.modules.webgl
+    size: 0
+  - key: HotReload Module
+    value:
+    - Required by AssetBundle Module
+    icon: package/com.unity.modules.hotreload
+    size: 0
+  - key: IMGUI Module
+    value:
+    - Required by UIElements Module
+    icon: package/com.unity.modules.imgui
+    size: 0
+  - key: ImageConversion Module
+    value:
+    - Required by UnityWebRequestTexture Module
+    icon: package/com.unity.modules.imageconversion
+    size: 0
+  - key: InputLegacy Module
+    value:
+    - Required by IMGUI Module
+    - Required by UIElements Module
+    icon: package/com.unity.modules.inputlegacy
+    size: 0
+  - key: JSONSerialize Module
+    value:
+    - Required by RuntimeInitializeOnLoadManagerInitializer Module
+    - Required by UIElements Module
+    icon: package/com.unity.modules.jsonserialize
+    size: 0
+  - key: ParticleSystem Module
+    value:
+    - ParticleSystem
+    - ParticleSystemRenderer
+    icon: package/com.unity.modules.particlesystem
+    size: 0
+  - key: ParticleSystem
+    value:
+    - Assets/Scenes/Game.unity
+    icon: class/ParticleSystem
+    size: 0
+  - key: ParticleSystemRenderer
+    value:
+    - Assets/Scenes/Game.unity
+    icon: class/ParticleSystemRenderer
+    size: 0
+  - key: Physics Module
+    value:
+    - Collider
+    - PhysicsManager
+    - Rigidbody
+    icon: package/com.unity.modules.physics
+    size: 0
+  - key: Collider
+    value: []
+    icon: class/Collider
+    size: 0
+  - key: PhysicsManager
+    value: []
+    icon: class/PhysicsManager
+    size: 0
+  - key: Rigidbody
+    value: []
+    icon: class/Rigidbody
+    size: 0
+  - key: Physics2D Module
+    value:
+    - Physics2DSettings
+    - Rigidbody2D
+    icon: package/com.unity.modules.physics2d
+    size: 0
+  - key: Physics2DSettings
+    value: []
+    icon: class/Physics2DSettings
+    size: 0
+  - key: Rigidbody2D
+    value: []
+    icon: class/Rigidbody2D
+    size: 0
+  - key: RuntimeInitializeOnLoadManagerInitializer Module
+    value:
+    - RuntimeInitializeOnLoadManagerInitializer is always required
+    icon: package/com.unity.modules.runtimeinitializeonloadmanagerinitializer
+    size: 0
+  - key: RuntimeInitializeOnLoadManagerInitializer is always required
+    value: []
+    icon: class/DefaultAsset
+    size: 0
+  - key: SharedInternals Module
+    value:
+    - Required by Animation Module
+    - Required by AssetBundle Module
+    - Required by Audio Module
+    - Required by Core Module
+    - Required by HotReload Module
+    - Required by IMGUI Module
+    - Required by ImageConversion Module
+    - Required by InputLegacy Module
+    - Required by JSONSerialize Module
+    - Required by ParticleSystem Module
+    - Required by Physics Module
+    - Required by Physics2D Module
+    - Required by RuntimeInitializeOnLoadManagerInitializer Module
+    - Required by TLS Module
+    - Required by TextCoreFontEngine Module
+    - Required by TextCoreTextEngine Module
+    - Required by TextRendering Module
+    - Required by UI Module
+    - Required by UIElements Module
+    - Required by UnityWebRequest Module
+    - Required by UnityWebRequestTexture Module
+    - Required by WebGL Module
+    icon: package/com.unity.modules.sharedinternals
+    size: 0
+  - key: Required by Core Module
+    value: []
+    icon: package/com.unity.modules.core
+    size: 0
+  - key: TLS Module
+    value:
+    - Required by UnityWebRequest Module
+    icon: package/com.unity.modules.tls
+    size: 0
+  - key: TextCoreFontEngine Module
+    value:
+    - Required by TextCoreTextEngine Module
+    - Required by UIElements Module
+    icon: package/com.unity.modules.textcorefontengine
+    size: 0
+  - key: TextCoreTextEngine Module
+    value:
+    - Required by IMGUI Module
+    - Required by UIElements Module
+    icon: package/com.unity.modules.textcoretextengine
+    size: 0
+  - key: TextRendering Module
+    value:
+    - Font
+    - Required by IMGUI Module
+    - Required by TextCoreFontEngine Module
+    - Required by TextCoreTextEngine Module
+    - Required by UI Module
+    - Required by UIElements Module
+    icon: package/com.unity.modules.textrendering
+    size: 0
+  - key: Font
+    value:
+    - Assets/Scenes/Game.unity
+    - Assets/Scenes/Menu.unity
+    icon: class/Font
+    size: 0
+  - key: UI Module
+    value:
+    - Canvas
+    - CanvasGroup
+    - CanvasRenderer
+    - Required by UIElements Module
+    icon: package/com.unity.modules.ui
+    size: 0
+  - key: Canvas
+    value:
+    - Assets/Scenes/Game.unity
+    - Assets/Scenes/Menu.unity
+    icon: class/Canvas
+    size: 0
+  - key: CanvasGroup
+    value:
+    - Assets/Scenes/Game.unity
+    - Assets/Scenes/Menu.unity
+    icon: class/CanvasGroup
+    size: 0
+  - key: CanvasRenderer
+    value:
+    - Assets/Scenes/Game.unity
+    - Assets/Scenes/Menu.unity
+    icon: class/CanvasRenderer
+    size: 0
+  - key: UIElements Module
+    value: []
+    icon: package/com.unity.modules.uielements
+    size: 0
+  - key: UnityWebRequest Module
+    value:
+    - Required by UnityWebRequestTexture Module
+    icon: package/com.unity.modules.unitywebrequest
+    size: 0
+  - key: UnityWebRequestTexture Module
+    value: []
+    icon: package/com.unity.modules.unitywebrequesttexture
+    size: 0
+  - key: WebGL Module
+    value:
+    - WebGL is always required
+    icon: package/com.unity.modules.webgl
+    size: 0
+  - key: WebGL is always required
+    value: []
+    icon: class/DefaultAsset
+    size: 0
+  modules:
+  - Animation Module
+  - AssetBundle Module
+  - Audio Module
+  - Core Module
+  - HotReload Module
+  - IMGUI Module
+  - ImageConversion Module
+  - InputLegacy Module
+  - JSONSerialize Module
+  - ParticleSystem Module
+  - Physics Module
+  - Physics2D Module
+  - RuntimeInitializeOnLoadManagerInitializer Module
+  - SharedInternals Module
+  - TLS Module
+  - TextCoreFontEngine Module
+  - TextCoreTextEngine Module
+  - TextRendering Module
+  - UI Module
+  - UIElements Module
+  - UnityWebRequest Module
+  - UnityWebRequestTexture Module
+  - WebGL Module
+  serializedSizes: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  totalSize: 0
+  builtCodePath: D:/Builds/words/Build/words.wasm
+  developmentBuild: 0
+--- !u!114 &-7784786057222685033
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13805, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!382020655 &-4831626395837698147
+PluginBuildInfo:
+  m_RuntimePlugins:
+  - Newtonsoft.Json
+  - Unity.Collections.LowLevel.ILSupport
+  - Auth
+  - EnvirData
+  - DOTween
+  - YandexMetricaPlugin
+  - GameReadyAPI
+  - Unity.Burst.Unsafe
+  - Payments
+  - CloudStorage
+  - Unity.VisualScripting.Antlr3.Runtime
+  - LocalStorage
+  - YandexProvider
+  - Language
+  - nunit.framework
+  m_EditorPlugins:
+  - Unity.Plastic.Newtonsoft.Json
+  - Google.JarResolver
+  - BoundedBiharmonicWeightsModule
+  - Google.IOSResolver
+  - Google.VersionHandler
+  - Unity.Plastic.Antlr3.Runtime
+  - Unity.VisualScripting.YamlDotNet
+  - Unity.Burst.Cecil.Mdb
+  - Unity.VisualScripting.TextureAssets
+  - zlib64Plastic
+  - Unity.VisualScripting.IonicZip
+  - liblz4Plastic
+  - JetBrains.Rider.PathLocator
+  - unityplastic
+  - Unity.Burst.Cecil.Pdb
+  - Unity.Burst.Cecil
+  - log4netPlastic
+  - Google.VersionHandlerImpl
+  - Unity.Burst.Cecil.Rocks
+  - lz4x64Plastic
+  - Unity.VisualScripting.sqlite3
+  - Google.PackageManagerResolver
+  - AppleEventIntegration
+  - DOTweenEditor
+--- !u!1521398425 &-3803410764374968254
+VideoBuildInfo:
+  m_VideoClipCount: 0
+  m_IsVideoModuleDisabled: 0
+--- !u!1125 &1
+BuildReport:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Build_2024-29-Jun-16-21-08
+  m_Summary:
+    buildStartTime:
+      serializedVersion: 2
+      ticks: 638552568649346462
+    buildGUID: 382083926ba84d5689bfc779fa8c4957
+    platformName: WebGL
+    platformGroupName: WebGL
+    subtarget: 0
+    options: 8
+    assetBundleOptions: 0
+    outputPath: D:/Builds/words
+    crc: 0
+    totalSize: 14211176
+    totalTimeTicks: 28639727
+    totalErrors: 0
+    totalWarnings: 0
+    buildType: 1
+    buildResult: 1
+  m_Files:
+  - path: D:/Builds/words/Build/words.framework.js.br
+    role: br
+    id: 0
+    totalSize: 72580
+  - path: D:/Builds/words/Build/words.wasm.br
+    role: br
+    id: 1
+    totalSize: 7497854
+  - path: D:/Builds/words/Build/words.data.br
+    role: br
+    id: 2
+    totalSize: 6240319
+  - path: D:/Builds/words/Build/words.loader.js
+    role: js
+    id: 3
+    totalSize: 20642
+  - path: D:/Builds/words/background.png
+    role: png
+    id: 4
+    totalSize: 348758
+  - path: D:/Builds/words/index.html
+    role: html
+    id: 5
+    totalSize: 17512
+  - path: D:/Builds/words/logo.png
+    role: png
+    id: 6
+    totalSize: 10117
+  - path: D:/Builds/words/style.css
+    role: css
+    id: 7
+    totalSize: 1973
+  - path: D:/Builds/words/Build/words.jpg
+    role: jpg
+    id: 8
+    totalSize: 1421
+  m_BuildSteps:
+  - stepName: Build player
+    durationTicks: 28639727
+    depth: 0
+    messages: []
+  - stepName: Preprocess Player
+    durationTicks: 343314
+    depth: 1
+    messages: []
+  - stepName: Prepare For Build
+    durationTicks: 159
+    depth: 1
+    messages: []
+  - stepName: ProducePlayerScriptAssemblies
+    durationTicks: 18006915
+    depth: 1
+    messages: []
+  - stepName: Prebuild Cleanup and Recompile
+    durationTicks: 15449124
+    depth: 2
+    messages: []
+  - stepName: Compile scripts
+    durationTicks: 15181132
+    depth: 3
+    messages: []
+  - stepName: Generate and validate platform script types
+    durationTicks: 157804
+    depth: 3
+    messages: []
+  - stepName: Verify Build setup
+    durationTicks: 764811
+    depth: 1
+    messages: []
+  - stepName: Check old data build
+    durationTicks: 660101
+    depth: 2
+    messages: []
+  - stepName: Set up scripts only build
+    durationTicks: 47717
+    depth: 2
+    messages: []
+  - stepName: Prepare assets for target platform
+    durationTicks: 1129717
+    depth: 1
+    messages: []
+  - stepName: Prepare splash screen
+    durationTicks: 31782
+    depth: 1
+    messages:
+    - type: 3
+      content: Including Unity Splash Screen logo because 'Show Unity Logo' is enabled.
+  - stepName: Run script only build
+    durationTicks: 382767
+    depth: 1
+    messages: []
+  - stepName: Build scripts DLLs
+    durationTicks: 118262
+    depth: 2
+    messages: []
+  - stepName: GetReferencedAssemblies
+    durationTicks: 7066
+    depth: 3
+    messages: []
+  - stepName: Postprocess built player
+    durationTicks: 7334571
+    depth: 1
+    messages:
+    - type: 3
+      content: Modify build complete
+    - type: 3
+      content: "Build Report Tool: Saved \"C:/Users/\u0434\u0430\u043D\u044F/Documents/UnityBuildReports/UBR-colors-WebGL-2024Jun29-162104.xml\""
+  - stepName: Setup incremental player build
+    durationTicks: 625551
+    depth: 2
+    messages: []
+  - stepName: Incremental player build
+    durationTicks: 1705469
+    depth: 2
+    messages: []
+  - stepName: Report output files
+    durationTicks: 8390
+    depth: 2
+    messages: []
+  m_Appendices:
+  - {fileID: -8051846541714888237}
+  - {fileID: -7784786057222685033}
+  - {fileID: -4831626395837698147}
+  - {fileID: 1623705563292633672}
+  - {fileID: -3803410764374968254}
+--- !u!641289076 &1623705563292633672
+AudioBuildInfo:
+  m_IsAudioDisabled: 0
+  m_AudioClipCount: 0
+  m_AudioMixerCount: 0

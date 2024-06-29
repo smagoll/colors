@@ -2,16 +2,25 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IDropHandler
+public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
     [SerializeField] 
     private Letter letter;
+    private RectTransform m_transform;
+    
+    void Start () 
+    {
+        m_transform = GetComponent<RectTransform>();
+    }
     
     public void OnDrag(PointerEventData eventData)
     {
         if (letter.IsDone) return;
         
-        transform.position = Input.mousePosition;
+        Vector3 vec = Camera.main.WorldToScreenPoint(m_transform.position);
+        vec.x += eventData.delta.x;
+        vec.y += eventData.delta.y;
+        m_transform.position = Camera.main.ScreenToWorldPoint(vec);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -20,8 +29,8 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IDrop
         letter.Cell = null;
         transform.SetParent(GameManager.instance.dragTransform);
     }
-
-    public void OnDrop(PointerEventData eventData)
+    
+    public void OnEndDrag(PointerEventData eventData)
     {
         List<RaycastResult> resultList = new();
         EventSystem.current.RaycastAll(eventData, resultList);
@@ -31,7 +40,7 @@ public class DragAndDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IDrop
             if (raycastResult.gameObject.CompareTag("Cell"))
             {
                 var cell = raycastResult.gameObject.GetComponent<Cell>();
-                if (cell.InstalledLetter != null) break;
+                if (cell.IsDone) break;
                 cell.Set(letter);
                 return;
             }

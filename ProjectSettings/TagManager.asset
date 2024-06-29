@@ -7,6 +7,7 @@ TagManager:
   - Cell
   - Letter
   - ListLetter
+  - music
   layers:
   - Default
   - TransparentFX

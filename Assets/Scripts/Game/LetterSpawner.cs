@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Text;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class LetterSpawner : MonoBehaviour
@@ -11,22 +12,22 @@ public class LetterSpawner : MonoBehaviour
 
     public List<Letter> Letters { get; } = new();
     
-    public void Spawn(Level level)
+    public void Launch(Level level)
     {
         Clear();
 
         switch (level.Mode)
         {
             case Mode.Single:
-                Spawn(level.Words);
+                Spawn(level.Words).Forget();
                 break;
             case Mode.Duo:
-                Spawn(level.Words);
+                Spawn(level.Words).Forget();
                 break;
         }
     }
 
-    private void Spawn(string[] words)
+    private async UniTaskVoid Spawn(string[] words)
     {
         StringBuilder sb = new StringBuilder();
 
@@ -42,6 +43,7 @@ public class LetterSpawner : MonoBehaviour
             var letter = Instantiate(prefabLetter, listLetters);
             letter.Init(symbol);
             Letters.Add(letter);
+            await UniTask.Delay(50);
         }
     }
 

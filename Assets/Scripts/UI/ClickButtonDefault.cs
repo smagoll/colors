@@ -1,7 +1,5 @@
 using UnityEngine;
 using DG.Tweening;
-using Unity.VisualScripting;
-using UnityEditor.U2D.Animation;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
@@ -19,6 +17,8 @@ public class ClickButtonDefault : MonoBehaviour
 
     private void Pressed()
     {
+        AudioController.instance.PlaySFX(AudioController.instance.button);
+        
         DOTween.Sequence()
             .Append(transform.DOScale(.8f, .3f))
             .Append(transform.DOScale(1f, .1f))

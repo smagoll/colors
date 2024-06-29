@@ -14,6 +14,8 @@ public class WindowComplete : MonoBehaviour, IWindow
     
     public void Show()
     {
+        ParticleManager.instance.FireworksComplete().Forget();
+        
         background.SetActive(true);
         windowInfo.SetActive(true);
 

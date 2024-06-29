@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public class Deck : MonoBehaviour
@@ -13,16 +14,17 @@ public class Deck : MonoBehaviour
     
     public void Init(int count)
     {
-        Spawn(count, transform);
+        Spawn(count, transform).Forget();
     }
-    
-    private void Spawn(int count, Transform listTransform)
+
+    private async UniTaskVoid Spawn(int count, Transform listTransform)
     {
         for (int i = 0; i < count; i++)
         {
             var cell = Instantiate(prefabCell, listTransform);
             cell.deck = this;
             Cells.Add(cell);
+            await UniTask.Delay(10);
         }
     }
 

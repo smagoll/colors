@@ -1,3 +1,4 @@
+using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,7 +7,7 @@ public class Cell : MonoBehaviour
     [SerializeField]
     private Color colorDone;
     [SerializeField]
-    private Image image;
+    private SVGImage image;
     
     public Deck deck;
     public Letter InstalledLetter { get; set; }
@@ -37,7 +38,9 @@ public class Cell : MonoBehaviour
 
     public void Done()
     {
+        IsDone = true;
         image.color = colorDone;
         InstalledLetter.IsDone = true;
+        ParticleManager.instance.CellDone(transform);
     }
 }
